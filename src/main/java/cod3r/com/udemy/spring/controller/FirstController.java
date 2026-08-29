@@ -10,9 +10,6 @@ import cod3r.com.udemy.spring.model.Cliente;
 @RequestMapping("/clientes")
 public class FirstController {
 
-    // Nota: "path =" não é necessário se ele for o único argumento
-    // @GetMapping("/path")
-
     @GetMapping("/default")
     public Cliente retornarObjeto() {
         return new Cliente(0, "nome", "123.456.789.10");
