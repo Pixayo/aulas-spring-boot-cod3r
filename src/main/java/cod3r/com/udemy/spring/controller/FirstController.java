@@ -18,17 +18,9 @@ public class FirstController {
         return new Cliente(0, "nome", "123.456.789.10");
     }
 
-    // Nota: esta é uma forma mais adequada de conseguir valores através da URL
     @GetMapping
     public Cliente retornarClientePorId(@RequestParam int id) {
         return new Cliente(id, "nome", "123.456.789.10");
     }
-
-    /* Nota: esta forma de extrair valores da URL não é recomendado
-    @GetMapping("/{id}")
-    public Cliente retornarClientePorId(@PathVariable int id) {
-        return new Cliente(id, "nome", "123.456.789.10");
-    }
-    */
 
 }
